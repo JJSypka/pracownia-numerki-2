@@ -1,7 +1,9 @@
 """Zbieznosc metod iteracyjnych"""
 
 import przyklad0, zadanie, iteracyjne
-
+import iteracjaseidela
+import zadanie1
+import zadanie2
 def testy(typ):
     if typ == 1:    
         # porownanie metod iteruj_roznica oraz iteruj_twierdzenie
@@ -18,7 +20,8 @@ def testy(typ):
     elif typ == 4:
         # realizacja przykladowego zadania - sprawdzamy wplyw skali wektora
         # poczatkowego na zbieznosc metody iteracji prostej
-        # wykonujemy najpierw test - wybieramy 2 przykladowe wart. parametru
+        # wykonujemy najpierw test - wybieramy 2 przykladowe wart. parametr
+        # u
         test4 = zadanie.Zadanie()
         test4.testy()
     elif typ == 5:
@@ -36,8 +39,14 @@ def testy(typ):
         test7 = iteracyjne.Iteracyjne(10)
         test7.page_rank_iteracja()
     elif typ == 8:
-        # tutaj mozna zrealizowac zadania
-        pass
+        test8 = zadanie1.Zadanie1()
+        #test8.testy() #uzyc do testow i tabelki w excel
+        test8.badaj_zbieznosc()
+    elif typ == 9:
+        test9 =zadanie2.Zadanie2()
+        #test9.testy()
+        test9.badaj_zbieznosc()
+
     
 if __name__ == '__main__':
-    testy(1)
+    testy(9)
